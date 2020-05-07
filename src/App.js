@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import {CHANGE_NAME} from './redux/user/actions';
+import Grid1 from './components/GridForExam/grid'
+import Grid2 from './components/Grid2/grid';
+import Grid3 from './components/Grid3/grid';
+import NavBar from "./components/NavBar/NavBar";
+import {Route, BrowserRouter} from 'react-router-dom';
 
 function App({user, changeName}) {
     const [name, setName] = useState("");
@@ -13,6 +18,17 @@ function App({user, changeName}) {
         Click me To chane name
       </button>
       {console.log(user.name)}
+
+      <br />
+      <br />
+    <BrowserRouter>
+      <div>
+          <NavBar />
+          <Route exact path='/Grid1'  component={Grid1} />
+          <Route path='/Grid2'  component={Grid2} />
+          <Route path='/Grid3'  component={Grid3} />
+      </div>
+    </BrowserRouter>
 
     </div>
   );
