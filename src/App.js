@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import {CHANGE_NAME} from './redux/user/actions';
+import {changeName} from './redux/user/actions';
 import Grid1 from './components/GridForExam/grid'
 import Grid2 from './components/Grid2/grid';
 import Grid3 from './components/Grid3/grid';
@@ -42,7 +42,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    changeName: (name) => dispatch(CHANGE_NAME(name))
+    changeName: (name) => dispatch(changeName(name))
   }
 };
 

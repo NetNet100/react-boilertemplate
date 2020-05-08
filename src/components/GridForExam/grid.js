@@ -19,7 +19,7 @@ const grid = (props) => {
                 {text1}
             </div>
             <div>
-                {text2}
+                {text3}
             </div>
         </div>
     )
